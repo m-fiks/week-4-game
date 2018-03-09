@@ -1,4 +1,5 @@
 'use strict';
+$(document).ready(function(){
 //variables
 let winCounter=0;
 let loseCounter=0;
@@ -15,6 +16,27 @@ const buttonValue= [1,2,3,4,5,6,7,8,9,10,11,12,13,14,15];
 $("#win-counter").append(winCounter);
 $("#lose-counter").append(loseCounter);
 
+// assign value to image buttons
+const gemPush = function () {
+    $('#blue-gem').click(function() {
+        playerGameScore += parseInt(playerScore) + parseInt(blueButton);
+    $('#score-counter').text((parseInt(playerGameScore)));
+    });
+    $('#crystal-gem').click(function() {
+        playerGameScore += parseInt(playerScore) + parseInt(crystalButton);
+    $('#score-counter').text((parseInt(playerGameScore)));
+    });
+    $('#purple-gem').click(function() {
+        playerGameScore += parseInt(playerScore) + parseInt(purpleButton);
+    $('#score-counter').text((parseInt(playerGameScore)));
+    });
+    $('#green-gem').click(function() {
+        playerGameScore += parseInt(playerScore) + parseInt(greenButton);
+    $('#score-counter').text((parseInt(playerGameScore)));
+    });
+    
+};
+
 //initialize game
 const clickToStart = function(){
     let randomNumber = numberArray[Math.floor(Math.random() * numberArray.length)];
@@ -22,56 +44,21 @@ const clickToStart = function(){
     $('.number-generated').text(randomNumber);
     //set player score to 0 and display it
     playerScore=0;
-    $('.total-score').append(playerScore);
+    $('#score-counter').append(playerScore);
     //jewel buttons get new values
     crystalButton=[Math.floor(Math.random()*buttonValue.length)];
     purpleButton=[Math.floor(Math.random()*buttonValue.length)];
     blueButton=[Math.floor(Math.random()*buttonValue.length)];
     greenButton=[Math.floor(Math.random()*buttonValue.length)];
     console.log(parseInt(crystalButton[0]), parseInt(purpleButton[0]), parseInt(blueButton[0]), parseInt(greenButton[0]));
+    gemPush();
 };
 
 $('.btn-success').click(clickToStart);
 
-// assign value to image buttons
-$('#blue-gem').click(function() {
-    playerGameScore += parseInt(playerScore) + parseInt(blueButton);
-$('.total-score').text((parseInt(playerGameScore)));
 });
-$('#crystal-gem').click(function() {
-    playerGameScore += parseInt(playerScore) + parseInt(crystalButton);
-$('.total-score').text((parseInt(playerGameScore)));
-});
-$('#purple-gem').click(function() {
-    playerGameScore += parseInt(playerScore) + parseInt(purpleButton);
-$('.total-score').text((parseInt(playerGameScore)));
-});
-$('#green-gem').click(function() {
-    playerGameScore += parseInt(playerScore) + parseInt(greenButton);
-$('.total-score').text((parseInt(playerGameScore)));
-});
-
-// let gemPush = function (){
-//     playerGameScore += 
-
-// }
-
-
-
-// $('img').click(function (){
-//     if ()
-// })
 
 // const test = function () {
 //     console.log('werk werk werk werk werk');
 // }
-
-// $('#crystal-gem, #blue-gem, #purple-gem, #green-gem').click(test);
-//if press crystal-gem store crystalButton in a value, etc, etc
-//if player presses any button add that value to playerScore
-//if click on any img-responsive add value of corresponding crystal
-
-$('#crystal-gem').click(function(){
-    
-})
 
