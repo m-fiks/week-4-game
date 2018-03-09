@@ -1,5 +1,7 @@
 'use strict';
 $(document).ready(function(){
+
+    $('#empty-words').hide();
 //variables
 let winCounter=0;
 let loseCounter=0;
@@ -39,6 +41,7 @@ const gemPush = function () {
 
 //initialize game
 const clickToStart = function(){
+    $('#empty-words').show().animate({right:'50px'});
     let randomNumber = numberArray[Math.floor(Math.random() * numberArray.length)];
     // console.log(randomNumber);
     $('.number-generated').text(randomNumber);
