@@ -36,35 +36,8 @@ const loser = function () {
 
 // assign value to image buttons
 const gemPush = function () {
-    $('#blue-gem').click(function() {
+    $('img').click(function() {
         playerGameScore += playerScore + parseInt(blueButton);
-    $('#score-counter').text(playerGameScore);
-        if (playerGameScore === parseInt(randomNumber)){
-            winner();
-        } else if (playerGameScore > parseInt(randomNumber)){
-            loser();
-        }
-    });
-    $('#crystal-gem').click(function() {
-        playerGameScore += playerScore + parseInt(crystalButton);
-    $('#score-counter').text(playerGameScore);
-        if (playerGameScore === parseInt(randomNumber)){
-            winner();
-        } else if (playerGameScore > parseInt(randomNumber)){
-            loser();
-        }
-    });
-    $('#purple-gem').click(function() {
-        playerGameScore += playerScore + parseInt(purpleButton);
-    $('#score-counter').text(playerGameScore);
-        if (playerGameScore === parseInt(randomNumber)){
-            winner();
-        } else if (playerGameScore > parseInt(randomNumber)){
-            loser();
-        }
-    });
-    $('#green-gem').click(function() {
-        playerGameScore += playerScore + parseInt(greenButton);
     $('#score-counter').text(playerGameScore);
         if (playerGameScore === parseInt(randomNumber)){
             winner();
@@ -76,6 +49,7 @@ const gemPush = function () {
 
 //initialize game
 const clickToStart = function(){
+    playerGameScore=0;
     $('#score-counter').empty();
     $('#empty-words').show().animate({right:'50px'});
     randomNumber = numberArray[Math.floor(Math.random() * numberArray.length)];
