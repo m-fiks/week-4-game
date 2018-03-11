@@ -1,6 +1,6 @@
 # week-4-game
 
->This is a guessing game created for class.
+> This is a guessing game that was created for class.
 
 ### Goal of the game:
 
