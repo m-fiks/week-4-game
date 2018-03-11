@@ -8,6 +8,7 @@ let updatedLoseCounter="";
 let updatedWinCounter="";
 let playerScore=0;
 let playerGameScore=0;
+
 let crystalButton="";
 let purpleButton="";
 let blueButton="";
@@ -31,6 +32,7 @@ const buttonValue= [1,2,3,4,5,6,7,8,9,10,11];
 //initialize game
 const clickToStart = function(){
     $('#score-counter').empty();
+    $('#score-counter').text(playerGameScore);
     updatedLoseCounter="";
     updatedWinCounter="";
     playerGameScore=0;
