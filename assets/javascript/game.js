@@ -43,14 +43,12 @@ const clickToStart = function(){
     randomNumber = numberArray[Math.floor(Math.random() * numberArray.length)];
     //console.log(randomNumber);
     $('.number-generated').text(randomNumber);
-
     //jewel buttons get new values
     crystalButton= buttonValue[Math.floor(Math.random() * buttonValue.length)] +1;
     purpleButton=buttonValue[Math.floor(Math.random() * buttonValue.length)] +1;
     blueButton=buttonValue[Math.floor(Math.random() * buttonValue.length)] +1;
     greenButton=buttonValue[Math.floor(Math.random() * buttonValue.length)] +1;
-
-    console.log(blueButton,crystalButton,purpleButton,greenButton);
+    //console.log(blueButton,crystalButton,purpleButton,greenButton);
 };
 
 $('.btn-success').click(clickToStart);
@@ -129,7 +127,5 @@ const loser = function () {
     $("#lose-counter").text(parseInt(updatedLoseCounter));
 };
 
-
 //end doc ready func
 });
-
