@@ -1,11 +1,15 @@
+/* font-family: 'Merriweather', serif;
+font-family: 'Archivo Narrow', sans-serif;
+font-family: 'Press Start 2P', cursive; */
+
 body{
     background-image:url('../images/subtle_grunge.png');
-    font-family: Georgia, 'Times New Roman', Times, serif;
+    font-family: 'Merriweather', serif;
 }
 
 .main{
     font-size: 18px;
-    border: 4px solid darkslategray;
+    border: 3px solid darkslategray;
     background-color: #e0d7e5;
     margin-bottom:10px;
 }
@@ -17,35 +21,40 @@ body{
 .random-number{
     text-align:center;
     font-size: 28px;
-    border:4px solid darkslategray;
+    border:3px solid darkslategray;
     background-color: #e0d7e5;
     margin-bottom:20px;
+    font-family: 'Archivo Narrow', sans-serif;
 }
 
 .win-lose{
     font-size: 20px;
-    border:4px solid darkslategray;
+    border:3px solid darkslategray;
     background-color: #e0d7e5;
     margin-bottom:20px;
+    font-family: 'Archivo Narrow', sans-serif;
 }
 
 .gems{
-    border:4px solid darkslategray;
+    border:3px solid darkslategray;
     background-color: #e0d7e5;
+    padding:15px;
     margin-bottom:20px;
 }
 
 .total-score{
     font-size:28px;
     text-align:center;
-    border:4px solid darkslategray;
+    border:3px solid darkslategray;
     background-color: #e0d7e5;
     margin-bottom: 20px;
+    font-family: 'Archivo Narrow', sans-serif;
 }
 
 h1{
-    text-align:center;
+    margin-left: 295px;
     font-size: 50px;
+    font-family: 'Archivo Narrow', sans-serif;
 }
 
 #empty-words{
@@ -53,14 +62,10 @@ h1{
     text-align:center;
 }
 
-img{
-    border: solid 3px white;
-    margin:10px;
-}
-
 .img-responsive{
     width:180px;
     height:120px;
+    padding: 10px;
 }
 
 .win-text{
@@ -72,6 +77,16 @@ img{
 }
 
 .btn{
-    margin-left:45px;
+    margin-left:20px;
     margin-bottom:20px;
+    font-family: 'Press Start 2P', cursive;
+}
+
+#win-or-lose-col {
+    font-size:30px;
+    text-align:center;
+    border:3px solid darkslategray;
+    background-color: #932acc;
+    margin-bottom:20px;
+    color: whitesmoke;
 }
